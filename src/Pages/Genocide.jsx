@@ -31,7 +31,7 @@ export default function Genocide() {
               alt=""
               className="object-cover object-center h-full w-full"
             />
-            <div className="absolute top-0 bottom-0 left-0 right-0 text-white px-5 flex bg-[#0e152072] hover:bg-transparent">
+            <div className="absolute top-0 bottom-0 left-0 right-0 text-white px-5 flex bg-[#0e152072] hover:bg-transparent transition-all">
               <div className="absolute left-0 right-0 bottom-0 px-4 py-3 lg:px-8 lg:py-7">
                 <a
                   href={data[0].url}
@@ -54,7 +54,7 @@ export default function Genocide() {
               alt=""
               className="object-cover object-center h-full w-full"
             />
-            <div className="absolute top-0 bottom-0 left-0 right-0 text-white px-5 flex bg-[#0e152072] hover:bg-transparent">
+            <div className="absolute top-0 bottom-0 left-0 right-0 text-white px-5 flex bg-[#0e152072] hover:bg-transparent transition-all">
               <div className="absolute left-0 right-0 bottom-0 px-4 py-3 lg:px-8 lg:py-7">
                 <a
                   href={data[1].url}

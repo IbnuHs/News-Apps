@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Dropdown } from "flowbite-react";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(true);
@@ -15,41 +17,71 @@ export default function Navbar() {
         } lg:translate-x-0 lg:relative lg:flex-row lg:text-white lg:pt-0 lg:pb-0 lg:top-0 lg:items-center lg:text-[12px] lg:gap-5 xl:text-[16px] lg:bg-transparent`}
       >
         <li className="">
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none ">
+          <Link
+            to="/"
+            className="border-b-2 border-b-brown-100 lg:border-none "
+          >
+            Home
+          </Link>
+        </li>
+        <li className="">
+          <Link
+            to="/category/business"
+            className="border-b-2 border-b-brown-100 lg:border-none "
+          >
             Business
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none">
+          <Link
+            to="/category/entertainment"
+            className="border-b-2 border-b-brown-100 lg:border-none"
+          >
             Entertainment
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none">
+          <Link
+            to="/category/general"
+            className="border-b-2 border-b-brown-100 lg:border-none"
+          >
             General
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none">
+          <Link
+            to="/category/health"
+            className="border-b-2 border-b-brown-100 lg:border-none"
+          >
             Health
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none">
+          <Link
+            to="/category/science"
+            className="border-b-2 border-b-brown-100 lg:border-none"
+          >
             Science
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none">
+          <Link
+            to="/category/sports"
+            className="border-b-2 border-b-brown-100 lg:border-none"
+          >
             Sports
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="border-b-2 border-b-brown-100 lg:border-none">
+          <Link
+            to="/category/technology"
+            className="border-b-2 border-b-brown-100 lg:border-none"
+          >
             Technology
-          </a>
+          </Link>
         </li>
       </ol>
+
       <input
         type="search"
         className="bg-transparent border-white border rounded-sm text-white text-[12px] px-4 hidden lg:block"

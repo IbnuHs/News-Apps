@@ -10,10 +10,10 @@ export default function ALjazeeraNews() {
           import.meta.env.VITE_API_KEY
         }`
       )
-      .then((res) => {
+      .then(res => {
         setData(res.data.articles);
       })
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
       });
   }, []);
@@ -27,8 +27,12 @@ export default function ALjazeeraNews() {
         </h1>
         <div className="flex md:flex-col md:w-full md:gap-3 ">
           {data[0] && (
-            <article className="relative aspect-video  hidden md:inline-block lg:w-[90%] m-auto">
-              <img src={data[0].urlToImage} alt="" className="object-cover" />
+            <article className="relative aspect-video w-full hidden md:inline-block lg:w-[90%] m-auto">
+              <img
+                src={data[0].urlToImage}
+                alt=""
+                className="object-cover aspect-video w-full"
+              />
               <div className="mt-3">
                 <a href={data[0].url} target="blank" className="">
                   <h1 className="text-[28px] line-clamp-2 pr-5 font-bold underline">
@@ -49,8 +53,7 @@ export default function ALjazeeraNews() {
                 return (
                   <article
                     key={index}
-                    className="relative aspect-square h-full md:h-auto w-full"
-                  >
+                    className="relative aspect-square h-full md:h-auto w-full md:aspect-auto">
                     <img
                       src={item.urlToImage}
                       alt=""
@@ -59,8 +62,7 @@ export default function ALjazeeraNews() {
                     <a
                       href={item.url}
                       target="blank"
-                      className="absolute top-0 inline-block w-full h-full z-10 bg-[#0000005a] hover:bg-transparent md:relative md:z-0 md:bg-transparent "
-                    >
+                      className="absolute top-0 inline-block w-full h-full z-10 bg-[#0000005a] hover:bg-transparent md:relative md:z-0 md:bg-transparent ">
                       <h1 className="text-[#EBEBEB] absolute bottom-4 text-center text-[18px] line-clamp-2 px-2 md:relative  md:bottom-0 md:text-start md:pr-4 md:px-0 md:text-[16px] underline underline-offset-2">
                         {item.title}
                       </h1>
